@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="cleaning_service_management_vts.booking_dashboard_template">
+
+        <div class="o_booking_dashboard o_spa_root">
+
+            <!-- ================= TITLE ================= -->
+            <h2 class="o_dashboard_title mb-4">
+                <t t-esc="state.title"/>
+            </h2>
+
+            <!-- ================= FILTER ================= -->
+            <div class="mb-4 d-flex gap-2 align-items-center">
+
+                <select t-on-change="onChangePeriod" class="form-select w-auto">
+                    <option value="7d">Last 7 Days</option>
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                </select>
+
+            </div>
+
+            <!-- ================= KPI CARDS ================= -->
+            <div class="row g-3 mb-4">
+
+                <!-- Draft -->
+                <div class="col-12 col-md-3">
+                    <div class="o_kpi_card kpi_draft"
+                         t-on-click="() => this.openBookings('draft')">
+
+                        <div>
+                            <div class="o_kpi_label">Draft</div>
+                            <div class="o_kpi_value">
+                                <t t-esc="state.data.draft"/>
+                            </div>
+                        </div>
+
+                        <i class="fa fa-file-text o_kpi_icon"/>
+                    </div>
+                </div>
+
+                <!-- Under Review -->
+                <div class="col-12 col-md-3">
+                    <div class="o_kpi_card kpi_review"
+                         t-on-click="() => this.openBookings('under_review')">
+
+                        <div>
+                            <div class="o_kpi_label">Under Review</div>
+                            <div class="o_kpi_value">
+                                <t t-esc="state.data.under_review"/>
+                            </div>
+                        </div>
+
+                        <i class="fa fa-search o_kpi_icon"/>
+                    </div>
+                </div>
+
+                <!-- Approved -->
+                <div class="col-12 col-md-3">
+                    <div class="o_kpi_card kpi_approved"
+                         t-on-click="() => this.openBookings('approved')">
+
+                        <div>
+                            <div class="o_kpi_label">Approved</div>
+                            <div class="o_kpi_value">
+                                <t t-esc="state.data.approved"/>
+                            </div>
+                        </div>
+
+                        <i class="fa fa-check o_kpi_icon"/>
+                    </div>
+                </div>
+
+                <!-- Rejected -->
+                <div class="col-12 col-md-3">
+                    <div class="o_kpi_card kpi_rejected"
+                         t-on-click="() => this.openBookings('rejected')">
+
+                        <div>
+                            <div class="o_kpi_label">Rejected</div>
+                            <div class="o_kpi_value">
+                                <t t-esc="state.data.rejected"/>
+                            </div>
+                        </div>
+
+                        <i class="fa fa-times o_kpi_icon"/>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ================= TOP SERVICES ================= -->
+            <div class="o_service_analysis mt-4">
+
+                <h4 class="o_dashboard_title mb-3">Top Services</h4>
+
+                <div class="row g-3">
+
+                    <!-- EMPTY STATE -->
+                    <t t-if="!state.serviceStats.length">
+                        <div class="col-12">
+                            <div class="text-muted p-3 border rounded">
+                                No service data available
+                            </div>
+                        </div>
+                    </t>
+
+                    <!-- SERVICE CARDS -->
+                    <t t-foreach="state.serviceStats" t-as="s" t-key="s.service">
+
+                        <div class="col-12 col-md-3">
+
+                            <div class="o_kpi_card kpi_service">
+
+                                <div>
+                                    <div class="o_kpi_label">
+                                        <t t-esc="s.service"/>
+                                    </div>
+
+                                    <div class="o_kpi_value">
+                                        <t t-esc="s.count"/>
+                                    </div>
+                                </div>
+
+                                <i class="fa fa-cube o_kpi_icon"/>
+
+                            </div>
+
+                        </div>
+
+                    </t>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </t>
+
+</templates>

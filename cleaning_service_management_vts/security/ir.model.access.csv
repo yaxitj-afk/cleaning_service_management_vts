@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_booking_request,access.booking.request,model_booking_request,,1,1,1,1
+access_service_type_vts,access.service.type.vts,model_service_type_vts,,1,1,1,1
+access_cleaning_shift_vts,access.cleaning.shift.vts,model_cleaning_shift_vts,,1,1,1,1
+access_cleaning_team_vts,access.cleaning.team.vts,model_cleaning_team_vts,,1,1,1,1
+access_booking_dashboard,access.booking.dashboard,model_booking_dashboard,,1,1,1,1

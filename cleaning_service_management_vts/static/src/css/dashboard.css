@@ -1,0 +1,133 @@
+.o_booking_dashboard.o_spa_root {
+    background-color: #ffffff;
+    min-height: 100%;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.o_booking_dashboard .o_dashboard_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+/* ===== KPI CARD BASE ===== */
+.o_booking_dashboard .o_kpi_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 12px;
+    border: 1px solid #eee;
+
+    padding: 16px;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    background: #fff;
+}
+
+.o_booking_dashboard .o_kpi_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== LEFT TEXT BLOCK ===== */
+.o_booking_dashboard .o_kpi_label {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.o_booking_dashboard .o_kpi_value {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* ===== ICON STYLE ===== */
+.o_booking_dashboard .o_kpi_icon {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+/* ===== KPI COLORS (LIKE YOUR OTHER MODULE) ===== */
+
+.o_booking_dashboard .kpi_draft {
+    background: #e8f0fe;
+    color: #1a73e8;
+}
+
+.o_booking_dashboard .kpi_review {
+    background: #fff4e5;
+    color: #e65100;
+}
+
+.o_booking_dashboard .kpi_approved {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.o_booking_dashboard .kpi_rejected {
+    background: #fdecea;
+    color: #b3261e;
+}
+
+/* =========================
+   SERVICE ANALYSIS SECTION
+========================= */
+
+.o_booking_dashboard .o_service_analysis {
+    margin-top: 30px;
+}
+
+/* TITLE */
+.o_booking_dashboard .o_service_analysis h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+/* CARD WRAPPER */
+.o_booking_dashboard .o_service_analysis .card {
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* EACH ROW */
+.o_booking_dashboard .o_service_analysis .d-flex {
+    transition: all 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.o_booking_dashboard .o_service_analysis .d-flex:hover {
+    background: #f8f9fa;
+    padding-left: 6px;
+    border-radius: 6px;
+}
+
+/* SERVICE NAME */
+.o_booking_dashboard .o_service_analysis .fw-semibold {
+    font-size: 14px;
+    color: #444;
+}
+
+/* COUNT BADGE */
+.o_booking_dashboard .o_service_analysis .badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+.o_service_analysis .kpi_service {
+    background: #e5e2ec;
+    color: #5c419f;
+}
+/* optional notification style like your other module */
+.o_notification_content {
+    white-space: pre-wrap !important;
+}

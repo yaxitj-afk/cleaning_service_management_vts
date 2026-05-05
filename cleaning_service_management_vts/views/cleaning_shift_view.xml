@@ -1,0 +1,52 @@
+<odoo>
+    <!--    LIST VIEW   -->
+    <record id="view_cleaning_shift_list_vts" model="ir.ui.view">
+        <field name="name">cleaning.shift.vts.list</field>
+        <field name="model">cleaning.shift.vts</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" width="100"/>
+                <field name="start_time" widget="float_time" width="100"/>
+                <field name="end_time" widget="float_time" width="100"/>
+                <field name="duration_hours" width="100"/>
+            </list>
+        </field>
+    </record>
+
+    <!--    FORM VIEW   -->
+    <record id="view_cleaning_shift_form_vts" model="ir.ui.view">
+        <field name="name">cleaning.shift.vts.form</field>
+        <field name="model">cleaning.shift.vts</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="note"/>
+                    </group>
+                    <group>
+                        <group string="Timing">
+                            <field name="start_time" widget="float_time"/>
+                            <field name="end_time" widget="float_time"/>
+                            <field name="duration_hours" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    ACTION   -->
+    <record id="action_cleaning_shift_vts" model="ir.actions.act_window">
+        <field name="name">Shifts</field>
+        <field name="res_model">cleaning.shift.vts</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!--    MENU   -->
+    <menuitem id="menu_cleaning_shift_vts"
+              name="Shifts"
+              parent="menu_cleaning_configuration_vts"
+              action="action_cleaning_shift_vts"
+              sequence="20"/>
+</odoo>
