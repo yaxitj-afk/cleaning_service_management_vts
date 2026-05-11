@@ -5,3 +5,6 @@ from . import cleaning_team_vts
 from . import project_task
 from . import hr_employee
 from . import booking_dashboard_vts
+from . import account_move
+from . import cleaning_holiday_vts
+from . import empl_availability_vts

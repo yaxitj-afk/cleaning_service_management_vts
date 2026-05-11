@@ -1,12 +1,11 @@
 <odoo>
     <data noupdate="1">
-        <!-- 1. Create the Project -->
+
         <record id="project_cleaning_default_vts" model="project.project">
             <field name="name">Cleaning Management</field>
             <field name="label_tasks">Cleanings</field>
         </record>
 
-        <!-- 2. Create the Stages and Link them -->
         <record id="stage_cleaning_todo_vts" model="project.task.type">
             <field name="name">To Do</field>
             <field name="sequence">1</field>

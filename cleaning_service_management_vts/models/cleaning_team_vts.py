@@ -1,3 +1,4 @@
+# -*- coding: utf-8 *-*
 from odoo import models, fields
 
 class CleaningTeam(models.Model):
@@ -6,22 +7,21 @@ class CleaningTeam(models.Model):
 
     name = fields.Char(string="Team Name", required=True)
 
-    leader_id = fields.Many2one(
-        'res.users',
-        string="Team Leader"
-    )
-
     employee_ids = fields.Many2many(
         'hr.employee',
-        string="Team Members"
+        string="Team Members",
+        help="Select employees who are part of the team.",
+        copy= False
+
     )
 
     cleaning_shift_id = fields.Many2one(
         'cleaning.shift.vts',
-        string="Shift"
+        string="Shift",
+        help="Select the shift for the cleaning service.",
+        copy=False
     )
 
-    active = fields.Boolean(default=True)
-    note = fields.Text(string="Notes")
+    note = fields.Text(string="Notes", help="Additional notes or remarks.")
 
     booked_request_ids = fields.One2many('booking.request','cleaning_team_id', string="Booked Request")

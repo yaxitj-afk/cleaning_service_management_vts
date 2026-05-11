@@ -1,3 +1,4 @@
+# -*- coding: utf-8 *-*
 from odoo import models, fields
 
 
@@ -6,12 +7,8 @@ class ProjectTask(models.Model):
 
     booking_id = fields.Many2one(
         'booking.request',
-        string="Booking Reference"
-    )
-
-    employee_ids = fields.Many2many(
-        'hr.employee',
-        string="Assigned Cleaners"
+        string="Booking Reference",
+        help="Related service booking reference for this task."
     )
 
 

@@ -57,5 +57,9 @@
             <field name="price_type">fixed</field>
         </record>
 
+        <record id="availability_checker_singleton" model="empl.availability.vts">
+            <field name="name">Check Availability</field>
+        </record>
+
     </data>
 </odoo>

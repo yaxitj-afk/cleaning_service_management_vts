@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_project_task_form_inherit_cleaning_management_vts" model="ir.ui.view">
         <field name="name">project.task.form.inherit.cleaning.management</field>
@@ -6,9 +7,6 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='user_ids']" position="after">
                 <field name="booking_id" readonly="1"/>
-                <field name="employee_ids"
-                       widget="many2many_tags"
-                       options="{'no_create': True}"/>
             </xpath>
         </field>
     </record>

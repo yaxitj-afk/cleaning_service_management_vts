@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_cleaning_service_type_list_vts" model="ir.ui.view">
         <field name="name">service.type.vts.list</field>
         <field name="model">service.type.vts</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name" width="50"/>
-                <field name="price_type"/>
+                <field name="name" width="20"/>
+                <field name="price_type" width="20"/>
                 <field name="default_fixed_price" width="20"/>
                 <field name="default_rate_per_sqft" width="20"/>
-                <field name="description" width="150px"/>
+                <field name="description" width="20"/>
             </list>
         </field>
     </record>
