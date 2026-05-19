@@ -1,0 +1,194 @@
+-> Cleaning Service Management | Online Booking Scheduling & Staff Availability
+
+
+The Cleaning Service Management module provides a complete solution for managing cleaning service bookings, staff scheduling, and customer communication directly within Odoo. Customers can book cleaning services from your website by selecting their preferred service, shift, date, and time slot, with their details automatically filled in if they are already logged in. The booking calendar only shows valid dates based on your configured shifts and holidays, and customers can also set up recurring cleaning plans on a daily, weekly, or monthly basis without having to book every time.
+
+Once a booking is received, your team can review it, assign the right manager, and track its progress through clear status stages from New Request to Approved or Rejected. The assigned manager automatically receives a detailed email notification the moment they are assigned, eliminating any need for manual follow-up. A built-in availability checker allows managers to verify which employees and cleaning teams are free for a specific date and shift before making any assignment, preventing scheduling conflicts. Role-based access control ensures that managers only see their own assigned bookings while administrators have full visibility over everything, keeping the entire workflow organized and secure.
+
+=========================================================================================================
+
+1. Features
+
+Saves Time:
+Customers book directly from your website without any back-and-forth. Logged-in users get their details filled in automatically, making bookings quick and effortless.
+
+Easy Scheduling:
+Shifts, time slots, and holidays are configured once and the system handles the rest — customers only see dates and times that are actually available.
+
+Recurring Services:
+Offer daily, weekly, or monthly cleaning plans so customers can set up a regular schedule without having to book every single time.
+
+Conflict-Free Assignment:
+Check staff and team availability before assigning anyone to a job, so you never end up with scheduling conflicts or double bookings.
+
+Automatic Notifications:
+Managers receive an instant email with full booking details the moment they are assigned, keeping communication smooth without any manual effort.
+
+Clear Booking Tracking:
+Every booking moves through a clear set of stages so your team always knows the current status of each request without having to ask around.
+
+Role-Based Access:
+Managers see only their own assigned bookings while administrators have full access, keeping data organized and secure at every level.
+
+Complete Configuration:
+Set up your service types, cleaning shifts, time slots, and holidays all in one place so your operations always reflect real-world availability.
+
+Invoice Generation:
+Once a booking is approved, an invoice can be created in one click with the customer details and service amount already filled in, saving your team from any manual billing work.
+
+Live Business Dashboard:
+A real-time dashboard shows your total bookings, revenue, approval rates, top services, and best performing teams all in one screen so you always have a clear picture of your business.
+
+Flexible Pricing:
+Each service type supports either a fixed price or an area-based rate per square foot, so the estimated amount is always calculated correctly based on the actual job size.
+
+
+=========================================================================================================
+
+2. Configuration :- 
+
+1.png — 
+After installing the module, the Cleaning Service app appears directly on your Odoo home screen, giving you quick and easy access to all booking and configuration options from one place.
+
+2.png — 
+From the Configuration menu, you can manage all the cleaning service types which your business offers such as Gym, Home, Hospital, Hotel, Office, and more. Each service type has its own pricing type, fixed price or rate per square foot, and a short description to make it easy to identify.
+
+
+3.png — 
+The Shifts & Slots section lets you define your working shifts such as Morning, Afternoon, Evening, and Night, along with their start time, end time, and total duration in hours, so customers can only book during your actual working hours, We provide built-in shifts that can be customized according to your requirements..
+
+
+4.png — 
+Inside each shift you can set the start and end time, choose how long each slot should be, set the gap between slots, and then simply click Generate Slots to automatically create all available time slots for that shift without any manual work.
+
+
+5.png — 
+The Cleaning Teams section shows all your teams along with the shift they are assigned to, making it easy to see which team is working during which part of the day and manage your workforce at a glance.
+
+
+6.png — 
+Each cleaning team has a name, an assigned shift, and a list of team members that work with the team. You can also see all the booking requests that have been assigned to this team directly from the Booked Requests tab, keeping everything organized in one place.
+
+
+7.png — 
+The Holidays & Week Off section allows you to define your days off, whether it is a regular weekly off day or a special exception holiday like Diwali, so those dates are automatically blocked on the booking calendar and customers cannot select that date.
+
+
+8.png and 8.1.png — 
+When creating a holiday, you give it a name, choose whether it is a Weekly Off or an Exception Holiday, select the specific day, and mark it as active. This gives you full control over which days are blocked for bookings without any confusion.
+
+
+9.png — 
+A dedicated Cleaning Shift tab is added to each employee profile where you can assign one or more working shifts to that employee, making it easy to track which shifts each person is available for when checking availability. Also added a smart button to view all their assigned tasks.
+
+
+==========================================================================================================
+
+3. Website :- 
+
+10.png —
+Customers can visit the Cleaning page on your website and book a cleaning service by filling in their personal details, selecting their preferred service, number of floors, rooms, area, cleaning shift, time slot, and choosing a date from the built-in calendar that only shows valid and available dates based on your configured shifts and holidays — so customers can never pick a blocked or unavailable date. Once everything is filled in, they simply click Submit Request to place their booking.
+
+	Note: If the customer is already logged in to the website, all their personal details such as name, address, mobile number, email, city, ZIP code, state, and country are automatically filled in, so they only need to select the service, shift, time slot, and date to complete the booking.
+
+
+10.1.png —
+When a customer checks the Recurring Service option, additional fields appear where they can set how often the service should repeat using the Repeat Every field, choose the type as Daily, Weekly, or Monthly, and select an end date from the calendar — which again only shows valid available dates so the recurring schedule is always accurate and conflict-free.
+
+	Note: The system automatically validates the end date based on the selected repeat interval, so customers cannot accidentally set an end date that does not make sense for their chosen schedule.
+
+
+11.png — 
+Once the customer clicks Submit Request and the booking is placed successfully, they are taken to a clean Thank You page confirming that their cleaning service request has been received and that the team will get back to them shortly.
+
+
+==========================================================================================================
+
+
+4. Backend Process:- 
+
+
+12.png —
+The dashboard gives you a live summary of your entire cleaning business showing total bookings, new requests, approvals, rejections, and total revenue all in one screen. Charts show how bookings are trending over time, which services are bringing in the most revenue, and which cleaning teams are performing the best. This helps you make better decisions and stay on top of your business without digging through individual records.
+
+12.1.png —
+From the Settings > Users & Companies and open any user profile. Under the Access Rights tab you can see all the roles assigned to that user across different modules. In the Other section you will find the Cleaning Service field where you can assign either Manager or Administrator role. A Manager can only see and manage the bookings assigned to them, while an Administrator has full access to all bookings across the business. This role-based control ensures that each team member only sees what is relevant to them, keeping the workflow clean and data secure.
+
+13.png — 
+The Booking Requests screen gives a complete overview of all incoming bookings with the reference number, customer name, mobile number, area, preferred date, pricing type, estimated amount, and current status shown in color-coded labels — New Request, Under Review, Approved, and Rejected — making it easy to track every booking at a glance.
+
+14.png —
+When a customer submits a booking from the website, it appears in Odoo as a New Request with a unique reference number like we have BR/00098, It automatically fetch all the details enter in the website form, along with the customer's full details, service type, number of floors, rooms, area, preferred date, shift, and time slot all captured automatically — The administrator can assign a manager directly from the booking form by selecting them in the Assigned Manager field, ready for the manager to review.
+
+14.1.png —
+ Administrator can also review the full pricing details and recurring service settings including the repeat interval and ending date — all in one place before moving the booking forward.
+
+14.2.png —
+We also support a fixed-price option, allowing prices to be adjusted based on customer requirements and negotiated according to their specific needs.  
+
+15.png —
+Once the booking is moved to Under Review, the assigned manager automatically receives an email notification with the booking reference for review. The manager can check employee or team availability but clicking cleaner availability button, assign the request accordingly. The manager can choose the specific employee or team based on the requirement. All actions and updates are automatically logged in the chatter on the right, ensuring complete visibility and making sure nothing is missed.
+
+16.png — 
+The Cleaner Availability button opens the availability checker where the date, shift, and time slot from the booking are pre-filled automatically, and automatically shows how many employees and teams are free — the Available Teams tab displays each team along with their shift and all team members assigned to them.
+
+17.png — 
+The Available Employees tab shows a full list of individual employees who are free for the selected date, shift, and time slot, along with their position and the shifts they are assigned to — making it easy to pick the right person for the job without any guesswork.
+
+18.png —
+Once the manager reviews and approves the booking, the status is automatically updated to Approved, with the approval date recorded instantly. Based on the selected recurring plan, the cleaning tasks are created automatically, and an approval email is sent to the customer to inform that their request has been approved. 
+
+19.png —
+For recurring bookings, the system automatically creates a separate task for each scheduled cleaning session so your team always knows exactly what jobs are coming and when. Each task is listed with its due date and the assigned team members so nothing falls through the cracks. Your cleaning staff can track and manage each session independently without any manual planning.
+
+20.png — 
+Each task contains all the information the cleaning team needs to complete the job efficiently, including all booking details. When an employee begins the task, they simply click the Start button to begin tracking their working time. Once the task is completed, they click Stop, and the recorded time is automatically added to the timesheet according to the standard Odoo workflow, ensuring accurate time tracking and proper service records.
+
+21.png —
+A Create Invoice button also appears at the top of the booking screen, allowing the admin to generate the customer’s invoice immediately as per the estimated price without leaving the page.
+
+22 and 22.1.png —
+Clicking Create Invoice generates a ready-to-send customer invoice with the customer details and the correct service amount already filled automatically. The admin simply reviews it and confirms it to make it official and ready for the customer. The further process of invoice is done as per the odoo standard flow.
+
+==========================================================================================================
+
+
+5. FAQs
+
+Can customers book without logging in?
+Yes, public customers can fill in their details and submit a booking request directly from the website without needing an account.
+
+Can I offer recurring cleaning services?
+Yes, customers can choose daily, weekly, or monthly recurring services with a defined end date.
+
+How does the availability checker work?
+You select a date, shift, and time slot and the system shows you which employees and teams are available for that slot so you can assign the right people.
+
+Can I control who sees which bookings?
+Yes, managers only see bookings assigned to them while administrators can view and manage all bookings across the business.
+
+Will the assigned manager be notified automatically?
+Yes, as soon as a manager is assigned to a booking they receive a detailed email with all the booking information.
+
+Do I need technical knowledge to use this module?
+No, the module is completely user-friendly and can be set up and used without any technical expertise.
+
+Can I set holidays and days off so customers cannot book on those days?
+Yes, you can configure weekly off days and specific holiday date ranges and the booking calendar will automatically block those dates.
+
+Can I generate an invoice directly from a booking?
+Yes, once a booking is approved a Create Invoice button appears and the invoice is generated automatically with all the details already filled in.
+
+Will tasks be created automatically for recurring bookings?
+Yes, when a recurring booking is approved the system automatically creates a separate task for each scheduled cleaning session with the full booking details included.
+
+Can I assign a cleaning team or an individual employee based on booking?
+Yes, you can assign either a full cleaning team or a specific individual employee to any booking depending on the job requirements.
+
+Who is the point of contact for technical support or bug-related queries?
+You can reach us via support@vrajatechnologies.com
+
+Can I get a demo of the module before making a purchase?
+Yes, to test this module please contact us at sales@vrajatechnologies.com
+
+
